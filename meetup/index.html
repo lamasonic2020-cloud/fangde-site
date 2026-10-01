@@ -183,6 +183,38 @@
     .hero h1 span{white-space:normal}
   }
 
+
+  /* pay guide */
+  .guide{display:grid;grid-template-columns:minmax(0,1fr);gap:18px}
+  .mock{width:100%;max-width:300px;background:#fff;border-radius:18px;overflow:hidden;border:1px solid rgba(0,0,0,.14);box-shadow:0 8px 28px rgba(0,0,0,.10);font-family:system-ui,-apple-system,sans-serif;color:#202124;margin:0 auto}
+  .mock-bar{display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:1px solid #e5e5e5;font-size:14px}
+  .mock-bar span{color:#888}
+  .mock-body{padding:16px 16px 42px}
+  .mock-h{font-weight:800;font-size:18px;margin-bottom:12px}
+  .mock-lock{position:relative;background:#0f0f10;border-radius:10px;height:130px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:#fff;font-weight:700;font-size:14px;opacity:.55}
+  .mock-lock em{position:absolute;top:8px;right:10px;font-style:normal;font-size:11px;font-weight:700;background:#fff;color:#c0392b;padding:2px 8px;border-radius:999px}
+  .mock-menu{color:#3b6fd8;font-size:13px;margin:14px 0 12px 4px}
+  .mock-btn{position:relative;background:#f2d28b;border-radius:6px;text-align:center;padding:12px 0;font-weight:800;font-size:14px;letter-spacing:.04em;box-shadow:0 2px 4px rgba(0,0,0,.12)}
+  .mock-btn .ring{position:absolute;inset:-7px;border:3px solid var(--orange);border-radius:10px;animation:pulse 1.6s ease-out infinite}
+  .mock-btn .tap{position:absolute;right:-6px;bottom:-30px;font-size:12.5px;font-weight:800;color:#fff;background:var(--orange);padding:3px 10px;border-radius:999px;white-space:nowrap}
+  @keyframes pulse{0%{opacity:1;transform:scale(.98)}70%{opacity:0;transform:scale(1.08)}100%{opacity:0}}
+  .guide-steps{list-style:none;counter-reset:g;margin-top:22px}
+  .guide-steps li{counter-increment:g;display:grid;grid-template-columns:40px 1fr;gap:10px;padding:14px 0;border-top:1px solid rgba(0,0,0,.16);font-size:15px;align-items:baseline}
+  .guide-steps li:last-child{border-bottom:1px solid rgba(0,0,0,.16)}
+  .guide-steps li::before{content:"0" counter(g);font-family:'Noto Serif TC',serif;font-weight:700;color:var(--orange);font-size:14px;letter-spacing:.1em}
+  .guide-steps b{background:#f2d28b;padding:0 6px;border-radius:3px;color:var(--ink)}
+  .pay-hint{display:block;margin-top:10px;font-size:12.5px;color:var(--ink-4)}
+  .pay-hint b{background:#f2d28b;color:var(--ink);padding:0 5px;border-radius:3px}
+
+  /* modal */
+  .modal{position:fixed;inset:0;z-index:100;background:rgba(26,25,24,.55);display:none;align-items:center;justify-content:center;padding:16px}
+  .modal.open{display:flex}
+  .modal-box{background:var(--paper-hi);border-radius:6px;max-width:420px;width:100%;max-height:calc(100vh - 32px);overflow:auto;padding:26px 22px 22px;position:relative}
+  .modal-box h3{font-family:'Noto Serif TC',serif;font-weight:900;font-size:22px;line-height:1.45;margin-bottom:6px}
+  .modal-box p.m-sub{font-size:14px;color:var(--ink-2);margin-bottom:22px}
+  .modal-close{position:absolute;top:10px;right:14px;font-size:24px;color:var(--ink-4);background:none;border:0;cursor:pointer;line-height:1}
+  .modal .btn{width:100%;text-align:center;margin-top:30px}
+
   /* motion */
   @keyframes rise{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
   @keyframes up{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
@@ -215,7 +247,7 @@
       <p class="lead">想做的事列了一整排，每天打開手機兩小時就沒了。AI 工具學了一個又一個，學完還是不知道要往哪走。這個下午，我們帶 30 個人面對面坐下來，把你接下來半年的主線寫出來，再把時間從手機那邊搶回來</p>
       <div class="cta-stack">
         <a class="btn js-cta" href="#">搶一個位子｜US$17</a>
-        <span class="cta-note">限 30 位・Skool Classroom 付款即完成報名</span>
+        <span class="cta-note">限 30 位・點進 Skool 後，按黃色 <b style="background:#f2d28b;color:var(--ink);padding:0 5px;border-radius:3px">LEARN MORE</b> 付款</span>
       </div>
     </div>
     <div class="info-card">
@@ -374,11 +406,23 @@
     <div>
       <div class="label"><span>入場券</span><span class="hand">grab a seat</span></div>
       <h2>一頓午餐加一杯咖啡的錢<br>換一個下午把方向寫清楚</h2>
-      <ol class="how">
-        <li>點報名按鈕，直接進到 Skool 入場券頁面（還沒加入「訪得們」的話會先請你加入，免費）</li>
-        <li>付款 US$17，就是報名成功</li>
-        <li>填課程裡的名牌表單（名字＋IG），沒填當天沒有名牌</li>
+      <div class="guide">
+      <div class="mock" aria-hidden="true">
+        <div class="mock-bar"><span>←</span><b>訪得們 Founders</b></div>
+        <div class="mock-body">
+          <div class="mock-h">活動資訊</div>
+          <div class="mock-lock"><svg width="26" height="30" viewBox="0 0 26 30" fill="none" stroke="#fff" stroke-width="2.6"><rect x="2" y="13" width="22" height="15" rx="3"/><path d="M7 13V9a6 6 0 0 1 12 0v4"/><circle cx="13" cy="20.5" r="1.6" fill="#fff" stroke="none"/></svg><span>Unlock for $17</span><em>不是點這裡</em></div>
+          <div class="mock-menu">← Menu</div>
+          <div class="mock-btn">LEARN MORE<i class="ring"></i><span class="tap">👆 點這個</span></div>
+        </div>
+      </div>
+      <ol class="guide-steps">
+        <li><span>點報名按鈕，進到 Skool 的「活動資訊」頁（還沒加入「訪得們」會請你先加入，免費）</span></li>
+        <li><span>看到黑色鎖頭不用理它，往下點黃色的 <b>LEARN MORE</b> 按鈕</span></li>
+        <li><span>進去付款 US$17，付完就是報名成功</span></li>
+        <li><span>回到課程頁填名牌表單（名字＋IG），沒填當天沒有名牌</span></li>
       </ol>
+      </div>
       <p style="font-size:13px;color:var(--ink-4);margin-top:18px">報名後不提供退費。付款有問題，直接私訊 IG <a href="https://www.instagram.com/founder733/" target="_blank" rel="noopener" style="color:var(--ink);border-bottom:1px solid var(--orange)">@founder733</a></p>
     </div>
     <div class="dark">
@@ -428,6 +472,31 @@
 
 <footer>© 失敗免疫者 × 訪得｜10/23 台中線下聚會｜有問題請私訊 <a href="https://www.instagram.com/founder733/" target="_blank" rel="noopener" style="color:var(--ink);border-bottom:1px solid var(--orange)">@founder733</a></footer>
 
+
+<div class="modal" id="payModal" role="dialog" aria-modal="true" aria-labelledby="payTitle">
+  <div class="modal-box">
+    <button class="modal-close" id="payClose" aria-label="關閉">×</button>
+    <h3 id="payTitle">付款前先看一眼</h3>
+    <p class="m-sub">點進去會先看到一個黑色鎖頭，付款按鈕在下面的黃色按鈕裡</p>
+    <div class="mock" aria-hidden="true">
+        <div class="mock-bar"><span>←</span><b>訪得們 Founders</b></div>
+        <div class="mock-body">
+          <div class="mock-h">活動資訊</div>
+          <div class="mock-lock"><svg width="26" height="30" viewBox="0 0 26 30" fill="none" stroke="#fff" stroke-width="2.6"><rect x="2" y="13" width="22" height="15" rx="3"/><path d="M7 13V9a6 6 0 0 1 12 0v4"/><circle cx="13" cy="20.5" r="1.6" fill="#fff" stroke="none"/></svg><span>Unlock for $17</span><em>不是點這裡</em></div>
+          <div class="mock-menu">← Menu</div>
+          <div class="mock-btn">LEARN MORE<i class="ring"></i><span class="tap">👆 點這個</span></div>
+        </div>
+      </div>
+    <ol class="guide-steps" style="margin-top:44px">
+        <li><span>點報名按鈕，進到 Skool 的「活動資訊」頁（還沒加入「訪得們」會請你先加入，免費）</span></li>
+        <li><span>看到黑色鎖頭不用理它，往下點黃色的 <b>LEARN MORE</b> 按鈕</span></li>
+        <li><span>進去付款 US$17，付完就是報名成功</span></li>
+        <li><span>回到課程頁填名牌表單（名字＋IG），沒填當天沒有名牌</span></li>
+      </ol>
+    <a class="btn" id="payGo" href="#" target="_blank" rel="noopener">我知道了，前往付款</a>
+  </div>
+</div>
+
 <div class="sticky" id="sticky">
   <div class="info"><b>10/23 台中｜US$17</b>剩 <span class="js-left">30</span> 位</div>
   <a class="btn js-cta" href="#">立即報名</a>
@@ -440,7 +509,18 @@
     const DEADLINE = new Date("2026-10-21T23:59:59+08:00");
   /* ========================== */
 
-  document.querySelectorAll(".js-cta").forEach(a => { a.href = SIGNUP_URL; a.target = "_blank"; a.rel = "noopener"; });
+  const modal = document.getElementById("payModal");
+  const go = document.getElementById("payGo");
+  go.href = SIGNUP_URL;
+  document.querySelectorAll(".js-cta").forEach(a => {
+    a.href = SIGNUP_URL;
+    a.addEventListener("click", e => { e.preventDefault(); modal.classList.add("open"); document.body.style.overflow = "hidden"; });
+  });
+  const closeModal = () => { modal.classList.remove("open"); document.body.style.overflow = ""; };
+  document.getElementById("payClose").addEventListener("click", closeModal);
+  modal.addEventListener("click", e => { if (e.target === modal) closeModal(); });
+  go.addEventListener("click", closeModal);
+  document.addEventListener("keydown", e => { if (e.key === "Escape") closeModal(); });
   const EVENT_DAY = Date.UTC(2026, 9, 23); // 10/23
 
   // 名額配速：每天 -2，剩 10 位後每天 -1，10/23 剛好 0（以台灣時間換日）
