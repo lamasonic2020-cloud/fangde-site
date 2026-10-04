@@ -111,7 +111,10 @@ h2.big{font-family:'Noto Serif TC',serif;font-weight:900;font-size:clamp(26px,3.
 .btn-light{background:#f2f1ee;color:#1a1918}
 .btn-light:hover{background:#fff;color:#1a1918}
 .card{background:#f0efed;border:1px solid rgba(0,0,0,.12);border-radius:4px;overflow:hidden;display:flex;flex-direction:column}
-.shot{width:100%;display:block;object-fit:contain}
+.shotbox{position:relative;overflow:hidden;flex:none}
+.shotbox.case{aspect-ratio:16/9;background:#0d0d0c}
+.shotbox.tm{aspect-ratio:16/10;background:#2b2a29}
+.shotbox img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block}
 
 /* intro */
 .intro{position:fixed;inset:0;z-index:999;background:#dedddb;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;will-change:transform;
@@ -342,7 +345,7 @@ h2.big{font-family:'Noto Serif TC',serif;font-weight:900;font-size:clamp(26px,3.
       <p style="font-size:14px;color:#8b8a86;max-width:40em;margin:0 0 clamp(44px,5vw,64px)">三位合作者，三種不同的起點，走到同一個結果：一份能持續變現的線上事業。</p>
       <div class="stagger" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(290px,100%),1fr));gap:clamp(20px,2.6vw,32px)">
         <article class="card">
-          <div style="aspect-ratio:16/9;background:#0d0d0c"><img class="shot" style="height:100%" src="assets/case-massage.jpg" alt="運動按摩師成果截圖：單週營收 188 萬" width="1670" height="942" loading="lazy"></div>
+          <div class="shotbox case"><img src="assets/case-massage.jpg" alt="運動按摩師成果截圖：單週營收 188 萬" width="1670" height="942" loading="lazy"></div>
           <div style="padding:clamp(24px,2.6vw,32px);display:flex;flex-direction:column;gap:14px;flex:1">
             <div><h3 class="serif" style="font-weight:900;font-size:21px;margin:0 0 4px">運動按摩師</h3><div style="font-size:12.5px;color:#e58a4b;font-weight:700;letter-spacing:.08em">運動按摩／專業服務</div></div>
             <p style="font-size:14px;color:#5c5b57;line-height:1.85;margin:0;flex:1">把運動按摩的服務與經驗轉到線上，做成課程與顧問式產品。移民美國後事業沒有停，單週創下 188 萬營收。</p>
@@ -351,7 +354,7 @@ h2.big{font-family:'Noto Serif TC',serif;font-weight:900;font-size:clamp(26px,3.
           </div>
         </article>
         <article class="card">
-          <div style="aspect-ratio:16/9;background:#0d0d0c"><img class="shot" style="height:100%" src="assets/case-speech.jpg" alt="表達訓練講師成果截圖：單場銷售活動營收 40 萬" width="1400" height="788" loading="lazy"></div>
+          <div class="shotbox case"><img src="assets/case-speech.jpg" alt="表達訓練講師成果截圖：單場銷售活動營收 40 萬" width="1400" height="788" loading="lazy"></div>
           <div style="padding:clamp(24px,2.6vw,32px);display:flex;flex-direction:column;gap:14px;flex:1">
             <div><h3 class="serif" style="font-weight:900;font-size:21px;margin:0 0 4px">表達訓練講師</h3><div style="font-size:12.5px;color:#e58a4b;font-weight:700;letter-spacing:.08em">表達訓練／教育社群</div></div>
             <p style="font-size:14px;color:#5c5b57;line-height:1.85;margin:0;flex:1">把一次性的現場教學，轉成可以持續交付、會員續費的年度訂閱社群，讓表達訓練走進具體生活場景與學習路徑。</p>
@@ -360,9 +363,9 @@ h2.big{font-family:'Noto Serif TC',serif;font-weight:900;font-size:clamp(26px,3.
           </div>
         </article>
         <article class="card">
-          <div style="aspect-ratio:16/9;background:#0d0d0c"><img class="shot" style="height:100%" src="assets/case-relationship.jpg" alt="關係顧問成果截圖：月收入 30 萬" width="1400" height="788" loading="lazy"></div>
+          <div class="shotbox case"><img src="assets/case-relationship.jpg" alt="關係顧問成果截圖：月收入 30 萬" width="1400" height="788" loading="lazy"></div>
           <div style="padding:clamp(24px,2.6vw,32px);display:flex;flex-direction:column;gap:14px;flex:1">
-            <div><h3 class="serif" style="font-weight:900;font-size:21px;margin:0 0 4px">關係顧問</h3><div style="font-size:12.5px;color:#e58a4b;font-weight:700;letter-spacing:.08em">關係內容</div></div>
+            <div><h3 class="serif" style="font-weight:900;font-size:21px;margin:0 0 4px">關係顧問</h3><div style="font-size:12.5px;color:#e58a4b;font-weight:700;letter-spacing:.08em">情感內容</div></div>
             <p style="font-size:14px;color:#5c5b57;line-height:1.85;margin:0;flex:1">從沒有產品、零起號開始做自媒體，一路收集客戶見證與需求，生成自己的產品，最後透過 Skool 私域完成變現。</p>
             <div style="font-size:12.5px;letter-spacing:.04em;color:#3a3936;font-weight:500;border-top:1px solid rgba(0,0,0,.12);padding-top:14px">零起號 → 收集需求 → 生成產品 → Skool 私域變現</div>
             <div style="font-size:12px;color:#9a9995;line-height:1.7">目前月收入 30 萬｜從零產品，到一份能養活自己的事業。</div>
@@ -376,42 +379,42 @@ h2.big{font-family:'Noto Serif TC',serif;font-weight:900;font-size:clamp(26px,3.
         <p style="font-size:14px;color:#8b8a86;max-width:40em;margin:0 0 clamp(28px,3.6vw,44px)">用同一套方法，先做出第一版 MVP，再讓市場告訴你答案。</p>
         <div class="stagger" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:clamp(16px,2vw,24px)">
           <article class="card">
-            <div style="aspect-ratio:2/1;background:#2b2a29"><img class="shot" style="height:100%" src="assets/tm-beauty.jpg" alt="美業老闆對話截圖" width="740" height="472" loading="lazy"></div>
+            <div class="shotbox tm"><img src="assets/tm-beauty.jpg" alt="美業老闆對話截圖" width="740" height="472" loading="lazy"></div>
             <div style="padding:clamp(18px,2vw,24px);display:flex;flex-direction:column;gap:12px;flex:1">
               <p style="font-size:13.5px;color:#3a3936;line-height:1.85;margin:0;flex:1">她把 20 幾個方案簡化成 3 個高單價方案。員工人數沒變、忙碌程度也沒變，月營收多了 50 萬，客戶品質與服務反而更好。</p>
               <div style="border-top:1px solid rgba(0,0,0,.12);padding-top:12px"><div style="font-size:13.5px;font-weight:700">美業老闆</div><div style="font-size:11.5px;color:#e58a4b;font-weight:700;margin-top:2px">20 幾個方案 → 3 個高單價方案，月營收多 50 萬</div></div>
             </div>
           </article>
           <article class="card">
-            <div style="aspect-ratio:2/1;background:#2b2a29"><img class="shot" style="height:100%" src="assets/tm-beauty-studio.jpg" alt="美業工作室老闆對話截圖" width="1206" height="451" loading="lazy"></div>
+            <div class="shotbox tm"><img src="assets/tm-beauty-studio.jpg" alt="美業工作室老闆對話截圖" width="1206" height="451" loading="lazy"></div>
             <div style="padding:clamp(18px,2vw,24px);display:flex;flex-direction:column;gap:12px;flex:1">
               <p style="font-size:13.5px;color:#3a3936;line-height:1.85;margin:0;flex:1">經營美業個人工作室 6 年多，她原本仰賴技術服務與實體教學；家人住院讓她意識到，只要無法在線下出現，收入就會中斷。釐清轉型方向後，她用 MVP 方式推出第一個純線上陪跑服務，首次開賣便成交 4 位，也證明自己的經驗與方法能在線上創造價值。</p>
               <div style="border-top:1px solid rgba(0,0,0,.12);padding-top:12px"><div style="font-size:13.5px;font-weight:700">美業工作室老闆</div><div style="font-size:11.5px;color:#e58a4b;font-weight:700;margin-top:2px">MVP：首次純線上陪跑 → 成交 4 位</div></div>
             </div>
           </article>
           <article class="card">
-            <div style="aspect-ratio:2/1;background:#2b2a29"><img class="shot" style="height:100%" src="assets/tm-tendon.jpg" alt="龍筋調理老師對話截圖" width="672" height="718" loading="lazy"></div>
+            <div class="shotbox tm"><img src="assets/tm-tendon.jpg" alt="龍筋調理老師對話截圖" width="672" height="718" loading="lazy"></div>
             <div style="padding:clamp(18px,2vw,24px);display:flex;flex-direction:column;gap:12px;flex:1">
               <p style="font-size:13.5px;color:#3a3936;line-height:1.85;margin:0;flex:1">不再拍容易被誤會的煽情影片，改用一支麥克風口播專業內容。兩週後，單週營業額等於過去六週的總和，現在更開了實體課，持續成交高單價培訓，從線下師傅轉型成線上講師。</p>
               <div style="border-top:1px solid rgba(0,0,0,.12);padding-top:12px"><div style="font-size:13.5px;font-weight:700">龍筋調理老師</div><div style="font-size:11.5px;color:#e58a4b;font-weight:700;margin-top:2px">單週營業額 ＝ 過去六週總和</div></div>
             </div>
           </article>
           <article class="card">
-            <div style="aspect-ratio:2/1;background:#2b2a29"><img class="shot" style="height:100%" src="assets/tm-insurance.jpg" alt="保險業務對話截圖" width="1400" height="308" loading="lazy"></div>
+            <div class="shotbox tm"><img src="assets/tm-insurance.jpg" alt="保險業務對話截圖" width="1400" height="308" loading="lazy"></div>
             <div style="padding:clamp(18px,2vw,24px);display:flex;flex-direction:column;gap:12px;flex:1">
               <p style="font-size:13.5px;color:#3a3936;line-height:1.85;margin:0;flex:1">過去靠線下跑訪的保險業務，透過社群優化與銷售頁更新，把自己變成名單磁鐵。兩週內多了數十位諮詢，成交近 10 位壽險與高資產傳承客戶，客戶開始主動上門詢問。</p>
               <div style="border-top:1px solid rgba(0,0,0,.12);padding-top:12px"><div style="font-size:13.5px;font-weight:700">保險業務</div><div style="font-size:11.5px;color:#e58a4b;font-weight:700;margin-top:2px">社群優化 → 兩週數十位諮詢、成交近 10 位</div></div>
             </div>
           </article>
           <article class="card">
-            <div style="aspect-ratio:2/1;background:#2b2a29"><img class="shot" style="height:100%" src="assets/tm-investing.jpg" alt="上班族投資陪跑對話截圖" width="1400" height="383" loading="lazy"></div>
+            <div class="shotbox tm"><img src="assets/tm-investing.jpg" alt="上班族投資陪跑對話截圖" width="1400" height="383" loading="lazy"></div>
             <div style="padding:clamp(18px,2vw,24px);display:flex;flex-direction:column;gap:12px;flex:1">
               <p style="font-size:13.5px;color:#3a3936;line-height:1.85;margin:0;flex:1">他原本是上班族，透過模組找到定位後，短短不到一週就做出自己的 MVP 並馬上變現，目前已成交 3 位客戶。</p>
               <div style="border-top:1px solid rgba(0,0,0,.12);padding-top:12px"><div style="font-size:13.5px;font-weight:700">上班族・投資陪跑</div><div style="font-size:11.5px;color:#e58a4b;font-weight:700;margin-top:2px">MVP：一週上線 → 成交 3 位客戶</div></div>
             </div>
           </article>
           <article class="card">
-            <div style="aspect-ratio:2/1;background:#2b2a29"><img class="shot" style="height:100%" src="assets/tm-accountant.jpg" alt="會計師對話截圖" width="1400" height="305" loading="lazy"></div>
+            <div class="shotbox tm"><img src="assets/tm-accountant.jpg" alt="會計師對話截圖" width="1400" height="305" loading="lazy"></div>
             <div style="padding:clamp(18px,2vw,24px);display:flex;flex-direction:column;gap:12px;flex:1">
               <p style="font-size:13.5px;color:#3a3936;line-height:1.85;margin:0;flex:1">他原本是會計師，手上完全沒有產品。我們陪他設計出第一版方案——30 天自律挑戰，成交第一位客戶，變現 660 美金。</p>
               <div style="border-top:1px solid rgba(0,0,0,.12);padding-top:12px"><div style="font-size:13.5px;font-weight:700">會計師・自律挑戰</div><div style="font-size:11.5px;color:#e58a4b;font-weight:700;margin-top:2px">MVP：30 天挑戰 → 變現 660 美金</div></div>
