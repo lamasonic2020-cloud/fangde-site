@@ -35,6 +35,7 @@
       "areaServed": "TW",
       "sameAs": [
         "https://www.instagram.com/founder733/",
+        "https://www.youtube.com/@founder733",
         "https://www.skool.com/founders-7366/about"
       ]
     },
@@ -46,7 +47,7 @@
       "jobTitle": "數位行銷顧問",
       "worksFor": { "@id": "https://lamasonic2020-cloud.github.io/fangde-site/#org" },
       "knowsAbout": ["個人品牌", "內容行銷", "私域經營", "線上課程", "Skool 社群經營", "專業服務轉型線上"],
-      "sameAs": ["https://www.instagram.com/founder733/"]
+      "sameAs": ["https://www.instagram.com/founder733/", "https://www.youtube.com/@founder733", "https://www.skool.com/founders-7366/about"]
     },
     {
       "@type": "ProfessionalService",
@@ -169,6 +170,8 @@ h2.big{font-family:'Noto Serif TC',serif;font-weight:900;font-size:clamp(26px,3.
 .field input:focus,.field textarea:focus,.field select:focus{border:1px solid #1a1918}
 .submit{all:unset;box-sizing:border-box;display:block;width:100%;text-align:center;background:#1a1918;color:#f2f1ee;font-size:16px;font-weight:700;letter-spacing:.06em;padding:16px;border-radius:3px;cursor:pointer;min-height:44px}
 .submit:hover{background:#000}
+.flink{display:inline-flex;align-items:center;gap:7px;color:#b8b7b2}
+.flink:hover{color:#f2f1ee}
 .submit[disabled]{opacity:.6;cursor:wait}
 
 @media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none!important;transition:none!important}.intro{display:none}}
@@ -436,8 +439,9 @@ h2.big{font-family:'Noto Serif TC',serif;font-weight:900;font-size:clamp(26px,3.
         <p style="margin:0 0 18px">訪得有限公司創辦人。以前在半導體廠當工程師，離職後自己創業，從零摸索怎麼把內容做成收入。現在專門陪做實體專業服務的老闆，教練、顧問、美業、業務都有，把面對面會成交的那一套搬到線上</p>
         <p style="margin:0 0 24px">我經營免費的 Skool 社群「訪得們」，目前有 2,700 位以上成員。一對一的合作叫 Moonshot 計劃，90 天陪你從定位、線上課程一路做到成交</p>
         <div style="display:flex;flex-wrap:wrap;gap:12px">
-          <a href="https://www.instagram.com/founder733/" target="_blank" rel="noopener" style="font-size:14px;font-weight:700;border:1px solid #1a1918;border-radius:2px;padding:10px 18px">IG @founder733</a>
-          <a href="https://www.skool.com/founders-7366/about" target="_blank" rel="noopener" style="font-size:14px;font-weight:700;border:1px solid #1a1918;border-radius:2px;padding:10px 18px">免費加入訪得們</a>
+          <a href="https://www.instagram.com/founder733/" target="_blank" rel="noopener me" style="font-size:14px;font-weight:700;border:1px solid #1a1918;border-radius:2px;padding:10px 18px">IG @founder733</a>
+          <a href="https://www.youtube.com/@founder733" target="_blank" rel="noopener me" style="font-size:14px;font-weight:700;border:1px solid #1a1918;border-radius:2px;padding:10px 18px">YouTube @founder733</a>
+          <a href="https://www.skool.com/founders-7366/about" target="_blank" rel="noopener me" style="font-size:14px;font-weight:700;border:1px solid #1a1918;border-radius:2px;padding:10px 18px">免費加入訪得們</a>
         </div>
       </div>
     </div>
@@ -556,7 +560,12 @@ h2.big{font-family:'Noto Serif TC',serif;font-weight:900;font-size:clamp(26px,3.
       <img src="assets/logo.png" alt="訪得 logo" width="26" height="26" style="display:block">
       <span>訪得有限公司｜內容私域・線上事業顧問｜創辦人 陳家維 Cody</span>
     </div>
-    <span>© 2026 訪得</span>
+    <nav aria-label="社群連結" style="display:flex;flex-wrap:wrap;align-items:center;gap:18px">
+      <a class="flink" href="https://www.instagram.com/founder733/" target="_blank" rel="noopener me" aria-label="Instagram @founder733"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none"/></svg><span>Instagram</span></a>
+      <a class="flink" href="https://www.youtube.com/@founder733" target="_blank" rel="noopener me" aria-label="YouTube @founder733"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="3.5"/><path d="M10 9.3v5.4l4.6-2.7z" fill="currentColor" stroke="none"/></svg><span>YouTube</span></a>
+      <a class="flink" href="https://www.skool.com/founders-7366/about" target="_blank" rel="noopener me" aria-label="Skool 免費社群 訪得們"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="8" cy="9" r="3"/><circle cx="16.5" cy="9.5" r="2.4"/><path d="M2.8 19c.6-3 2.7-4.6 5.2-4.6s4.6 1.6 5.2 4.6M13.8 15.2c.8-.6 1.7-.9 2.7-.9 2 0 3.6 1.3 4.1 3.7"/></svg><span>Skool 訪得們</span></a>
+      <span>© 2026 訪得</span>
+    </nav>
   </footer>
 </div>
 
