@@ -2,6 +2,14 @@
 <html lang="zh-Hant-TW">
 <head>
 <meta charset="utf-8">
+<script>
+/* 從帶 #錨點 的連結進站時，一律停在頁面最上方 */
+if(location.hash){
+  if('scrollRestoration' in history)history.scrollRestoration='manual';
+  history.replaceState(null,'',location.pathname+location.search);
+  addEventListener('load',function(){scrollTo(0,0)});
+}
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>訪得｜把實體專業服務做成線上事業｜陳家維 Cody 線上事業顧問</title>
 <meta name="description" content="訪得由陳家維 Cody 創立，幫教練、顧問、美業、業務等實體專業服務老闆，把面對面會成交的那一套搬到線上：用內容吸引精準客人、留住自己的名單，再把專業做成能持續賣的線上課程與 Skool 社群。免費申請 1 對 1 路線診斷。">
