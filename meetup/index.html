@@ -227,7 +227,7 @@
       <div class="card-head"><span>活動資訊</span><span class="hand">see you there</span></div>
       <div class="seats-big">
         <div class="sb-l"><span class="sb-k">今日剩餘名額</span><span class="sb-d" id="sbDate"></span></div>
-        <div class="sb-n"><b class="js-left">30</b><span>位</span></div>
+        <div class="sb-n"><b class="js-left">12</b><span>位</span></div>
       </div>
       <div class="row"><span class="k">日期</span><span class="v">10/23（五）</span></div>
       <div class="row"><span class="k">時間</span><span class="v">13:00–16:00</span></div>
@@ -392,7 +392,7 @@
       <div class="price"><b>500</b><span>新台幣／每人</span></div>
       <div class="seats">
         <div class="seats-bar"><i id="seatBar"></i></div>
-        <div class="seats-txt"><span>已報名 <span id="taken">0</span> / 30</span><span>剩 <span class="js-left">30</span> 位</span></div>
+        <div class="seats-txt"><span>已報名 <span id="taken">18</span> / 30</span><span>剩 <span class="js-left">12</span> 位</span></div>
       </div>
       <div class="dot-list" style="margin-bottom:28px">
         <div><i></i><span>三小時線下聚會＋現場帶寫</span></div>
@@ -437,7 +437,7 @@
 
 
 <div class="sticky" id="sticky">
-  <div class="info"><b>10/23 台中｜NT$500</b>剩 <span class="js-left">30</span> 位</div>
+  <div class="info"><b>10/23 台中｜NT$500</b>剩 <span class="js-left">12</span> 位</div>
   <a class="btn js-cta" href="#">立即報名</a>
 </div>
 
@@ -451,14 +451,12 @@
   document.querySelectorAll(".js-cta").forEach(a => { a.href = SIGNUP_URL; a.target = "_blank"; a.rel = "noopener"; });
   const EVENT_DAY = Date.UTC(2026, 9, 23); // 10/23
 
-  // 名額配速：每天 -2，剩 10 位後每天 -1，10/23 剛好 0（以台灣時間換日）
+  // 名額配速：10/11 剩 12 位，之後每天 -1，10/23 剛好 0（以台灣時間換日）
   function seatsLeft(){
     const tpe = new Date(Date.now() + 8 * 3600e3);
     const today = Date.UTC(tpe.getUTCFullYear(), tpe.getUTCMonth(), tpe.getUTCDate());
     const d = Math.round((EVENT_DAY - today) / 86400e3);
-    if (d <= 0) return 0;
-    if (d <= 10) return d;
-    return Math.min(TOTAL_SEATS, 10 + 2 * (d - 10));
+    return Math.max(0, Math.min(TOTAL_SEATS, d));
   }
   const left = seatsLeft();
   const TAKEN_SEATS = TOTAL_SEATS - left;
