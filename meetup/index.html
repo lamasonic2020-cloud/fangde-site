@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>11/6 台中線下聚會｜把注意力拿回來</title>
-<meta name="description" content="11/6 週五下午，台中，35 個人，500 元。把主線寫出來，把時間拿回來">
+<meta name="description" content="11/6 週五下午，台中，30 個人，500 元。把主線寫出來，把時間拿回來">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Noto+Serif+TC:wght@600;700;900&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
@@ -217,10 +217,10 @@
   <div class="inner hero-grid">
     <div class="hero-l">
       <h1><span>你每天醒著 16 小時</span><br><span>真正花在</span><br><span class="hl">自己想做的事</span><br><span>有多少</span></h1>
-      <p class="lead">想做的事列了一整排，每天打開手機兩小時就沒了。AI 工具學了一個又一個，學完還是不知道要往哪走。這個下午，我們帶 35 個人面對面坐下來，把你接下來半年的主線寫出來，再把時間從手機那邊搶回來</p>
+      <p class="lead">想做的事列了一整排，每天打開手機兩小時就沒了。AI 工具學了一個又一個，學完還是不知道要往哪走。這個下午，我們帶 30 個人面對面坐下來，把你接下來半年的主線寫出來，再把時間從手機那邊搶回來</p>
       <div class="cta-stack">
         <a class="btn js-cta" href="#">搶一個位子｜NT$500</a>
-        <span class="cta-note">限 35 位・線上刷卡付款，付完就完成報名</span>
+        <span class="cta-note">限 30 位・線上刷卡付款，付完就完成報名</span>
       </div>
     </div>
     <div class="info-card">
@@ -232,7 +232,7 @@
       <div class="row"><span class="k">日期</span><span class="v">11/6（五）</span></div>
       <div class="row"><span class="k">時間</span><span class="v">13:00–16:00</span></div>
       <div class="row"><span class="k">地點</span><span class="v">肝新 YOUNG LIVERS<br><a href="https://www.google.com/maps/search/?api=1&query=%E8%82%9D%E6%96%B0%20YOUNG%20LIVERS%20%E8%87%BA%E4%B8%AD%E5%B8%82%E8%A5%BF%E5%8D%80%E4%BA%94%E6%AC%8A%E8%A5%BF%E4%B8%80%E8%A1%97115%E4%B9%8B1%E8%99%9F%202%E6%A8%93" target="_blank" rel="noopener" style="font-family:'Noto Sans TC',sans-serif;font-weight:400;font-size:12.5px;color:var(--ink-3);border-bottom:1px solid var(--orange)">臺中市西區五權西一街115之1號 2樓</a></span></div>
-      <div class="row"><span class="k">名額</span><span class="v">限 35 位</span></div>
+      <div class="row"><span class="k">名額</span><span class="v">限 30 位</span></div>
       <div class="row"><span class="k">入場券</span><span class="v">NT$500</span></div>
       <div class="cd">
         <div><b id="d">--</b><small>天</small></div>
@@ -392,7 +392,7 @@
       <div class="price"><b>500</b><span>新台幣／每人</span></div>
       <div class="seats">
         <div class="seats-bar"><i id="seatBar"></i></div>
-        <div class="seats-txt"><span>已報名 <span id="taken">18</span> / 35</span><span>剩 <span class="js-left">12</span> 位</span></div>
+        <div class="seats-txt"><span>已報名 <span id="taken">18</span> / 30</span><span>剩 <span class="js-left">12</span> 位</span></div>
       </div>
       <div class="dot-list" style="margin-bottom:28px">
         <div><i></i><span>三小時線下聚會＋現場帶寫</span></div>
@@ -426,7 +426,7 @@
 <section class="final">
   <div class="inner reveal">
     <div class="label" style="justify-content:center"><span>P.S.</span><span class="hand">last call</span></div>
-    <h2>11/6 週五下午，台中肝新<br>35 個人，500 元</h2>
+    <h2>11/6 週五下午，台中肝新<br>30 個人，500 元</h2>
     <p class="sub">把主線寫出來，把時間拿回來</p>
     <a class="btn js-cta" href="#">搶一個位子</a>
   </div>
@@ -444,14 +444,14 @@
 <script>
   /* ===== 要改的地方都在這 ===== */
   const SIGNUP_URL = "https://p.ecpay.com.tw/68FE315";
-  const TOTAL_SEATS = 35;
+  const TOTAL_SEATS = 30;
     const DEADLINE = new Date("2026-11-04T23:59:59+08:00");
   /* ========================== */
 
   document.querySelectorAll(".js-cta").forEach(a => { a.href = SIGNUP_URL; a.target = "_blank"; a.rel = "noopener"; });
   const EVENT_DAY = Date.UTC(2026, 10, 6); // 11/6
 
-  // 名額配速：改期加開 5 位，10/22 剩 6 位，之後約每 2～3 天 -1，11/6 剛好 0（以台灣時間換日）
+  // 名額配速：改期後，10/22 剩 6 位，之後約每 2～3 天 -1，11/6 剛好 0（以台灣時間換日）
   function seatsLeft(){
     const tpe = new Date(Date.now() + 8 * 3600e3);
     const today = Date.UTC(tpe.getUTCFullYear(), tpe.getUTCMonth(), tpe.getUTCDate());
