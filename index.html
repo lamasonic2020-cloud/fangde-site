@@ -196,7 +196,7 @@ if(location.hash){
   ]
 }
 </script>
-<link rel="icon" href="assets/logo.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" href="assets/logo-clear.png"><link rel="apple-touch-icon" href="assets/logo-clear.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@900&display=swap">
 <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.__fd)document.documentElement.classList.remove('js')},4000)</script>
 <style>
@@ -233,7 +233,7 @@ a:focus-visible,summary:focus-visible,button:focus-visible{outline:2px solid var
 /* 頁首 */
 header{position:sticky;top:0;z-index:30;background:rgba(231,230,228,.88);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
 header .wrap{display:flex;align-items:center;gap:30px;padding-block:12px}
-.brand{display:flex;align-items:center;gap:12px;margin-right:auto}.brand b{font-family:var(--serif);font-weight:900;font-size:17px;letter-spacing:.08em;display:block;line-height:1.3}.brand small{font-size:12px;color:var(--soft);white-space:nowrap}
+.brand{display:flex;align-items:center;gap:12px;margin-right:auto}.brand img{border-radius:4px}.brand b{font-family:var(--serif);font-weight:900;font-size:17px;letter-spacing:.08em;display:block;line-height:1.3}.brand small{font-size:12px;color:var(--soft);white-space:nowrap}
 header nav{display:flex;gap:26px;font-size:14.5px}
 header nav a{padding:4px 2px;background:linear-gradient(var(--or),var(--or)) no-repeat 0 88%/0 .5em;transition:background-size .4s var(--e)}
 header nav a:hover,header nav a.on{background-size:100% .5em}
@@ -379,6 +379,8 @@ details[open]>summary .pm{background:var(--or);transform:rotate(180deg)}details[
 .submit{all:unset;box-sizing:border-box;width:100%;text-align:center;background:linear-gradient(90deg,var(--or) 50%,var(--ink) 50%) 100% 0/202% 100%;color:var(--on);font-weight:700;padding:18px;border-radius:3px;cursor:pointer;transition:background-position .5s var(--e),color .25s}.submit:hover{background-position:0 0;color:var(--ink)}.submit:focus-visible{outline:3px solid var(--or);outline-offset:2px}.submit[disabled]{opacity:.6;cursor:wait}.hand{display:none}
 .disc{font-size:13px;color:#9d9b96;margin-top:44px;text-align:center}
 footer{background:var(--ink);color:#b8b7b2;border-top:1px solid rgba(255,255,255,.14);font-size:14px}footer .wrap{padding-block:26px;display:flex;flex-wrap:wrap;gap:14px 24px;justify-content:space-between}.flink{display:inline-flex;gap:7px;align-items:center;transition:color .25s}.flink:hover{color:#fff}
+.dk{all:unset;display:inline-grid;place-items:center;width:34px;height:34px;margin:-10px -14px -10px -6px;vertical-align:middle;cursor:default;-webkit-tap-highlight-color:transparent}.dk::before{content:"";width:4px;height:4px;border-radius:50%;background:rgba(242,241,238,.22);transition:background .25s}
+.dk:focus-visible{outline:0}@media(hover:hover){.dk:hover::before{background:rgba(242,241,238,.75)}}
 
 /* 放大看 */
 dialog{border:0;padding:0;margin:0;background:none;width:100vw;max-width:none;height:100dvh;max-height:none}dialog::backdrop{background:rgba(15,14,13,.94)}
@@ -464,7 +466,7 @@ header nav{display:none}header .wrap{gap:12px}
 @media(max-width:500px){.brand small{display:none}}
 @media print{.js .rv,.js .stop,.js .plans tbody tr,.js .steps li>*{opacity:1!important;transform:none!important}}
 </style></head><body>
-<header><div class="wrap"><a class="brand" href="#top"><img src="assets/logo.png" alt="" width="42" height="42"><span><b>訪得</b><small>高單價方案・行銷路徑｜一對一顧問</small></span></a>
+<header><div class="wrap"><a class="brand" href="#top"><img src="assets/logo-clear.png" alt="訪得 Founder" width="46" height="46"><span><b>訪得</b><small>高單價方案・行銷路徑｜一對一顧問</small></span></a>
 <nav aria-label="主選單"><a href="#cases">見證</a><a href="#plans">服務</a><a href="#about">關於</a><a href="#faq">常見問題</a></nav><a class="btn" href="#apply">預約免費診斷</a></div><div class="pbar" aria-hidden="true"></div></header>
 <nav class="rail" aria-label="頁面路線"><ol><li><a href="#top"><span>首頁</span></a></li><li><a href="#cases"><span>見證</span></a></li><li><a href="#plans"><span>兩個計畫</span></a></li><li><a href="#offer"><span>方案設計</span></a></li><li><a href="#route"><span>行銷路徑</span></a></li><li><a href="#about"><span>關於</span></a></li><li><a href="#faq"><span>常見問題</span></a></li><li><a href="#apply"><span>申請</span></a></li></ol></nav>
 <main id="top">
@@ -489,7 +491,7 @@ header nav{display:none}header .wrap{gap:12px}
 <section class="sec alt" id="plans"><div class="wrap"><h2>兩個計畫，差在<mark>要不要做課程</mark></h2><p class="lead rv">不確定選哪個也沒關係，診斷的時候我會直接跟你說</p>
 <table class="plans" role="table"><caption>兩個計畫的內容比較</caption><colgroup><col class="l"><col><col></colgroup>
 <thead role="rowgroup"><tr role="row"><td role="cell"></td><th scope="col" role="columnheader"><span class="k">把現在的服務<wbr>或產品賣高價</span><h3>高單價<wbr>行銷計畫</h3></th><th scope="col" role="columnheader"><span class="k">連線上課程一起做</span><h3>Moonshot 計畫</h3></th></tr></thead>
-<tbody role="rowgroup"><tr role="row" class="me" style="--i:0"><th scope="row" role="rowheader">誰幫你做</th><td role="cell" colspan="2"><b>Cody 本人，一對一</b><span>開會、回 LINE 都是我，從診斷帶到你開始賣</span></td></tr><tr role="row" class="same" style="--i:1"><th scope="row" role="rowheader">多久</th><td role="cell" colspan="2">3 個月</td></tr><tr role="row" class="same" style="--i:2"><th scope="row" role="rowheader">高單價方案</th><td role="cell" colspan="2">我幫你設計，賣給誰、內容、定價、保證一次定案</td></tr><tr role="row" class="same" style="--i:3"><th scope="row" role="rowheader">行銷路徑</th><td role="cell" colspan="2">我幫你規劃，內容發什麼、名單怎麼收、怎麼讓對的人來申請</td></tr><tr role="row" class="same" style="--i:4"><th scope="row" role="rowheader">銷售頁</th><td role="cell" colspan="2">我幫你做，文案、版面到上線</td></tr><tr role="row" class="same" style="--i:5"><th scope="row" role="rowheader">談成交</th><td role="cell" colspan="2">話術寫給你，你的諮詢錄音我一句一句給回饋</td></tr><tr role="row" class="diff" style="--i:6"><th scope="row" role="rowheader">線上課程</th><td role="cell">不含</td><td role="cell"><b>我幫你設計、幫你做</b><br>課綱、講稿框架到上架</td></tr><tr role="row" style="--i:7"><th scope="row" role="rowheader">適合誰</th><td role="cell">店面、工作室、顧問、業務、品牌，想把現在賣的東西賣高價</td><td role="cell">在自己的產業做了很多年，想連課程一起做出來</td></tr><tr role="row" style="--i:8"><th scope="row" role="rowheader">做完你手上有</th><td role="cell">一個能賣高價的方案，和一條自己跑得動的行銷路徑</td><td role="cell">左邊全部，再加一門上架好的線上課程</td></tr></tbody></table>
+<tbody role="rowgroup"><tr role="row" class="me" style="--i:0"><th scope="row" role="rowheader">誰幫你做</th><td role="cell" colspan="2"><b>Cody 本人，一對一</b><span>開會、回 LINE 都是我，從診斷帶到你開始賣</span></td></tr><tr role="row" class="same" style="--i:1"><th scope="row" role="rowheader">多久</th><td role="cell" colspan="2">3 個月</td></tr><tr role="row" class="same" style="--i:2"><th scope="row" role="rowheader">高單價方案</th><td role="cell" colspan="2">我幫你設計，賣給誰、內容、定價、保證一次定案</td></tr><tr role="row" class="same" style="--i:3"><th scope="row" role="rowheader">行銷路徑</th><td role="cell" colspan="2">我幫你規劃，內容發什麼、名單怎麼收、怎麼讓對的人來申請</td></tr><tr role="row" class="same" style="--i:4"><th scope="row" role="rowheader">銷售頁</th><td role="cell" colspan="2">我幫你做，文案、版面到上線</td></tr><tr role="row" class="same" style="--i:5"><th scope="row" role="rowheader">談成交</th><td role="cell" colspan="2">話術寫給你，你的諮詢錄音我一句一句給回饋</td></tr><tr role="row" class="diff" style="--i:6"><th scope="row" role="rowheader">線上課程</th><td role="cell">不含</td><td role="cell"><b>我幫你設計、幫你做</b><br>課綱、講稿框架到上架</td></tr><tr role="row" class="diff" style="--i:7"><th scope="row" role="rowheader">3 個月之後</th><td role="cell">不含</td><td role="cell"><b>9 個月回診</b><br>第 6、9、12 個月各一次 1 對 1</td></tr><tr role="row" style="--i:8"><th scope="row" role="rowheader">適合誰</th><td role="cell">店面、工作室、顧問、業務、品牌，想把現在賣的東西賣高價</td><td role="cell">在自己的產業做了很多年，想連課程一起做出來</td></tr><tr role="row" style="--i:9"><th scope="row" role="rowheader">做完你手上有</th><td role="cell">一個能賣高價的方案，和一條自己跑得動的行銷路徑</td><td role="cell">左邊全部，再加一門上架好的線上課程</td></tr></tbody></table>
 <div class="after rv"><a class="btn" href="#apply">申請免費 1 對 1 路線診斷<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a><span class="note">診斷也是我本人，聊完再決定走哪個計畫</span></div>
 <p class="more rv">想把專業做成線上課程，<a class="lk" href="online/">這一頁講得更細</a></p></div></section>
 
@@ -543,7 +545,7 @@ header nav{display:none}header .wrap{gap:12px}
       <a class="flink" href="https://www.instagram.com/founder733/" target="_blank" rel="noopener me" aria-label="Instagram @founder733"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none"/></svg><span>Instagram</span></a>
       <a class="flink" href="https://www.youtube.com/@founder733" target="_blank" rel="noopener me" aria-label="YouTube @founder733"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="3.5"/><path d="M10 9.3v5.4l4.6-2.7z" fill="currentColor" stroke="none"/></svg><span>YouTube</span></a>
       <a class="flink" href="https://www.skool.com/founders-7366/about" target="_blank" rel="noopener me" aria-label="Skool 免費社群 訪得們"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="8" cy="9" r="3"/><circle cx="16.5" cy="9.5" r="2.4"/><path d="M2.8 19c.6-3 2.7-4.6 5.2-4.6s4.6 1.6 5.2 4.6M13.8 15.2c.8-.6 1.7-.9 2.7-.9 2 0 3.6 1.3 4.1 3.7"/></svg><span>Skool 訪得們</span></a>
-      <span>© 2026 訪得</span>
+      <span>© 2026 訪得<button type="button" class="dk" id="dk" tabindex="-1" aria-hidden="true"></button></span>
     </nav></div></footer>
 <dialog id="lb" aria-label="放大看截圖"><div class="lbi"><img alt=""></div><button type="button" class="x">關閉</button></dialog>
 <script>/* 申請表單 → Google 表單 */
@@ -669,4 +671,6 @@ header nav{display:none}header .wrap{gap:12px}
     });
   });
 })();
+
+(function(){var d=document.getElementById('dk');if(d)d.addEventListener('click',function(){var u=atob('aHR0cHM6Ly9sYW1hc29uaWMyMDIwLWNsb3VkLmdpdGh1Yi5pby9mYW5nZGUtcXVvdGUtcGFnZS8lRTglQTglQUElRTUlQkUlOTclRTUlQTAlQjElRTUlODMlQjklRTklQTAlODEuaHRtbA=='),w=window.open(u,'_blank');if(w)w.opener=null;else location.href=u})})();
 </script></body></html>
